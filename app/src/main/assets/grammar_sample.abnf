@@ -1,0 +1,23 @@
+﻿#ABNF 1.0 UTF-8;
+language zh-CN; 
+mode voice;
+
+root $weekday;
+
+$weekday =  $zday | $lxday;
+$zday = 周 ($day | 日);
+$lxday = { out = "7"; } (礼拜 | 星期) ($day | 天 | 日);
+
+ 
+
+$day = 一{ out = "1"; }
+
+| 二 { out = "2"; } 
+
+| 三 { out = "3"; } 
+
+| 四 { out = "4"; } 
+
+| 五 { out = "5"; } 
+
+| 六 { out = "6"; };
